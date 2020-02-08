@@ -42,7 +42,7 @@ def index(request):
                  message = {
                     'url': fs.url(filename),
                     'status':True,
-                    'message':"Video Analyzed Success",
+                    'message':"Unusual Activity Detected",
                     'start':start,
                     'end':end
                 }

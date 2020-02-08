@@ -101,16 +101,21 @@ function upload(url) {
 
     if (request.status == 200) {
 
-      // show_alert(`${request.response.message}`, "success");
+      show_alert(`${request.response.message}`, "success");
       // load video object
       // console.log("Success");
       // videoid.style.display="block"; 
-      $("#vid").append(
-        "<video id='example_video_1' class='video-js vjs-default-skin' autoplay controls='controls' preload='auto' width='320' height='240'"
-        +'data-setup=\'{"width\": 640, \"height\": 480}\'>'
-         + "<source src='"+request.response.url+"#t="+request.response.start+","+request.response.end+"' type='video/mp4' />"
-        +"</video>"
-      );
+      if( request.response.status){
+        $("#vid").html(
+          "<video id='example_video_1' class='video-js vjs-default-skin' autoplay controls preload='auto' width='320' height='240'"
+          +"data-setup=\"{'width': 640, 'height': 480}\">"
+          + "<source src=\""+request.response.url+"#t="+request.response.start+","+request.response.end+"\" type='video/mp4' />"
+          +"</video>"
+        );
+        
+        $("#navbar").removeClass("bg-primary").addClass("bg-danger");
+
+      }
       
       
       var video = videojs('example_video_1');

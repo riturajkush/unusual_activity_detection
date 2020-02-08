@@ -30,11 +30,11 @@
 </head>
 
 <body style="overflow-x: hidden;">
-	<nav class="navbar navbar-dark bg-primary">
+	<nav id="navbar" class="navbar navbar-dark bg-primary">
 		<ul class="navbar-nav ml-auto">
+        <li style="color:white;" class="nav-item active">{{request.user.username}}</li>
     		<li class="nav-item active">
        {% if request.user.is_authenticated %}
-        
 				<a class="navbar-brand trigger-btn"  href="{% url 'home:logout' %}">Logout</a>
         {% else %}
 				<a class="navbar-brand trigger-btn" data-toggle="modal" href="#myModal">Login</a>
@@ -82,12 +82,12 @@
 
         <div class="mb-3 mt-3">
 
-          <h2 class="mb-3" style="color:white; font-weight: 300">Upload Video</h2>
+          <h2 class="mb-3" style="color:white; font-weight: 300">Upload Surveillance Video</h2>
 
           <div class="form-group mb-3">
             <div class="custom-file">
               <input type="file" class="custom-file-input" name="file" id="file_input" oninput="input_filename();">
-              <label id="file_input_label" class="custom-file-label" for="image">Select file</label>
+              <label id="file_input_label" class="custom-file-label" for="image">Select Video file</label>
             </div>
           </div>
 
@@ -95,7 +95,7 @@
 
           <button class="btn btn-primary d-none" id="loading_btn" type="button" disabled>
             <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-            Uploading...
+            Processing...
           </button>
 
           <button type="button" id="cancel_btn" class="btn btn-secondary d-none">Cancel upload</button>
@@ -103,7 +103,7 @@
         </div>
 
         <div id="progress_wrapper" class="d-none">
-          <label id="progress_status"></label>
+          <label style="color:white;" id="progress_status"></label>
           <div class="progress mb-3">
             <div id="progress" class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
           </div>
@@ -113,7 +113,7 @@
 
       </div>
     </div>
-    <div id="vid">
+    <div style="margin-left: 50%; transform: translateX(-100%);" id="vid">
        
     </div>
   {% else %}
