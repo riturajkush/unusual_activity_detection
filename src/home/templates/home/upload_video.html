@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge"/>
-    <title>Video with markers</title>
+    <title>Unusual Activity Detection</title>
     <meta name="description" content=""/>
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1"/> -->
     <link rel="stylesheet" href="{% static 'home/video-js.min.css' %}"/>
@@ -22,15 +22,17 @@
   <style type="text/css">
   	body{
   		background-image: url("{% static 'home/cybersecurity.jfif' %} ");
+      padding-bottom: 400px;
+      background-size: cover;
   	}
-  	.container{
+  	/* .container{
   		 transform: translate(25%,40%);
-  	}
+  	} */
   </style>
 </head>
 
 <body style="overflow-x: hidden;">
-	<nav id="navbar" class="navbar navbar-dark bg-primary">
+	<nav id="navbar" style = "border-radius: 0 0 7px 7px;" class="navbar navbar-dark bg-primary">
 		<ul class="navbar-nav ml-auto">
         <li style="color:white;" class="nav-item active">{{request.user.username}}</li>
     		<li class="nav-item active">
@@ -76,8 +78,9 @@
 
 {% if request.user.is_authenticated %}
   <div class="container">
-  	<div id='trial'>
-    <div class="row w-50 text-center">
+    <div id='trial' style="width: fit-content; position: absolute;top:50%;left: 50%; margin-bottom: 150px; transform: translate(-50%,-50%);">
+      <center>
+    <div class="row text-center">
       <div class="col">
 
         <div class="mb-3 mt-3">
@@ -87,7 +90,7 @@
           <div class="form-group mb-3">
             <div class="custom-file">
               <input type="file" class="custom-file-input" name="file" id="file_input" oninput="input_filename();">
-              <label id="file_input_label" class="custom-file-label" for="image">Select Video file</label>
+              <label style="text-align: left;" id="file_input_label" class="custom-file-label" for="image">Select Video file</label>
             </div>
           </div>
 
@@ -111,15 +114,20 @@
 
         <div id="alert_wrapper"></div>
 
+        <center>
+          <h4 id="duration" style="color:white"></h4>
+          <div id="vid"></div>
+        </center>
       </div>
-    </div>
-    <div style="margin-left: 50%; transform: translateX(-100%);" id="vid">
-       
+       </center>
     </div>
   {% else %}
     <center><h1 style="color:white">Login Required</h1></center>
   {% endif %}
 
+    <br>
+    <br>
+    <br>
     <br>
     <br>
     <br>

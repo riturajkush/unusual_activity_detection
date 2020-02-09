@@ -106,27 +106,41 @@ function upload(url) {
       // console.log("Success");
       // videoid.style.display="block"; 
       if( request.response.status){
-        $("#vid").html(
-          "<video id='example_video_1' class='video-js vjs-default-skin' autoplay controls preload='auto' width='320' height='240'"
-          +"data-setup=\"{'width': 640, 'height': 480}\">"
-          + "<source src=\""+request.response.url+"#t="+request.response.start+","+request.response.end+"\" type='video/mp4' />"
-          +"</video>"
+        $("#vid").html(`
+          <video 
+          id='example_video_1' 
+          class='video-js vjs-default-skin' 
+          autoplay 
+          controls 
+          preload='auto' 
+          width='320' 
+          height='240'
+          data-setup="{'width': 800, 'height': 600}">
+          <source src="${request.response.url}#t=${request.response.start},${request.response.end}" type='video/mp4' />
+          </video>
+          `
         );
         
         $("#navbar").removeClass("bg-primary").addClass("bg-danger");
+        var video = videojs('example_video_1');
+        var aa = document.getElementById('trial');
+        aa.style.marginTop ='10%';
+        //load markers
+        video.markers({
+          markers: [
+            { time: request.response.start, text: "start" },
+            { time: request.response.end, text: "stop" },
+          ]
+        });
+        var start = request.response.start;
+        var end = request.response.end;
+        var timings = document.getElementById('duration');
+        timings.innerHTML = Math.floor(start / 60) + ":" + start % 60 + " to " + Math.floor(end / 60) + ":" + end % 60;
 
       }
       
       
-      var video = videojs('example_video_1');
-
-      //load markers
-      video.markers({
-        markers: [
-          { time: request.response.start, text: "start" },
-          { time: request.response.end, text: "stop" },
-        ]
-      });
+      
     }
     else {
 
