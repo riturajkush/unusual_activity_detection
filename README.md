@@ -25,9 +25,6 @@ They can be installed from the Python Package Index using pip as follows :
 
 
 
-## Tools Used
-
-
 
 ## Contributing
 You are welcome to contribute :
