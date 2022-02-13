@@ -7,16 +7,16 @@
 Running this project on your local system requires the following packages to be installed :
 
 * Tensorflow
-* jsonpickle
+* Keras
 * numpy
 * pandas
-* os
+
 
 
 They can be installed from the Python Package Index using pip as follows :
  
      pip install numpy
-     pip install jsonpickle
+     pip install keras
      pip install pandas
      pip install tensorflow
      pip install tensorflow-gpu
