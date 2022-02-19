@@ -1,4 +1,6 @@
-# Unusual Acitivity Detection
+# Unusual Acitivity Detector
+
+In this project we developed a Activity detection model using Convolutional-3D and ConvoLSTM. The model was deployed using Django which allows user to track live video feed and sends alarm to the officer if some unusal activity is detected.
 
 
 ## Getting Started
@@ -23,7 +25,7 @@ They can be installed from the Python Package Index using pip as follows :
      pip install tensorflow-gpu
      pip install Django
  
-### Usage
+
 
 
 
@@ -41,17 +43,7 @@ If you have any new ideas or suggestions to improve this project, feel free to c
 ## License
 This Project is licensed under the MIT License, see the [LICENSE](LICENSE) file for details.
 
-## Project Description and Results
 
-
-### Training 
-
-
-
-
-### Pipeline
-
-### Results
 
 ## Final Notes
 **Thanks for going through this Repository! Have a nice day.**</br>
