@@ -48,9 +48,11 @@ This Project is licensed under the MIT License, see the [LICENSE](LICENSE) file 
 ## Final Notes
 **Thanks for going through this Repository! Have a nice day.**</br>
 </br>**Got any Queries? Feel free to contact me.**</br>
+</br>**Rajiv Nayan Choubey**
 </br>**Ritwik Kumar Singh**
-<p align="left">
-<a href="mailto:ritwiksingh39@gmail.com"><img src="https://github.com/rohanrao619/Icons/blob/master/SVGs/Gmail.svg" height ="45" title="Gmail" alt="mailto:ritwiksingh39@gmail.com"></a>
-<a href="https://github.com/ritwik-singh"><img src="https://github.com/rohanrao619/Icons/blob/master/SVGs/GitHub.svg" height ="45" title="GitHub" alt="https://github.com/ritwik-singh"></a>
-<a href="https://www.linkedin.com/in/ritwiksingh28"><img src="https://github.com/rohanrao619/Icons/blob/master/SVGs/LinkedIn.svg" height ="45" title="LinkedIn" alt="https://www.linkedin.com/in/ritwiksingh28"></a>
-</p>
+</br>**Rituraj Kushwaha**
+</br>**Aditi Agrahari**
+</br>**Sanchita Khare**
+</br>**Loveleen Amar**
+
+
