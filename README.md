@@ -10,6 +10,7 @@ Running this project on your local system requires the following packages to be 
 * Keras
 * numpy
 * pandas
+* Django
 
 
 
@@ -20,6 +21,7 @@ They can be installed from the Python Package Index using pip as follows :
      pip install pandas
      pip install tensorflow
      pip install tensorflow-gpu
+     pip install Django
  
 ### Usage
 
